@@ -8,12 +8,12 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Make new" 
+        android:text="Add New Medication" 
         android:onClick="createNewMed" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="list" 
+        android:text="List of Medication" 
         android:onClick="displayList" />
 
 </LinearLayout>

@@ -5,28 +5,37 @@
     android:orientation="vertical" >
     
     <EditText android:id="@+id/medication_name"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:hint="@string/medication_name" />
    
     
     <EditText android:id="@+id/medication_dose"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
+        android:inputType="number"
         android:hint="@string/medication_dose" />
     
+    <Spinner
+    	android:id="@+id/dose_spinner"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content" />
+    
     <EditText android:id="@+id/medication_frequency"
-        android:layout_weight="1"
-        android:layout_width="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:hint="@string/medication_frequency" />
     
+
+    
     <Button android:id="@+id/button_save"
-        android:layout_weight="1"
-        android:layout_width ="wrap_content"
+        android:layout_weight="0.5"
+        android:layout_width ="fill_parent"
         android:layout_height="0dp"
+        android:layout_gravity="center"
         android:hint="@string/button_save"
         android:onClick="onSave"
         />

@@ -13,11 +13,13 @@ public class MedListActivity extends Activity {
 	
 	public static final String MEDICINE_NAME = "nameKey";
 	public static final String MEDICINE_DOSE = "dose";
+	public static final String MEDICINE_DOSE_UNIT = "doseUnit";
 	
 //	public static String [] names = new String [10];
 //    public static int [] doses = new int [10];
 	public static String name;
 	public static int dose;
+	public static String doseUnit;
 	
 	SharedPreferences medicationInfo;
 	
@@ -30,6 +32,7 @@ public class MedListActivity extends Activity {
 	    
 	    name = medicationInfo.getString(MEDICINE_NAME, "No name");
 	    dose = medicationInfo.getInt(MEDICINE_DOSE, 0);
+	    doseUnit = medicationInfo.getString(MEDICINE_DOSE_UNIT,"");
 	    
 //	    for (int i = 0; i < 10; i++) {
 //	    	names[i] = medicationInfo.getString(MEDICINE_NAME + i, "No name");
@@ -40,7 +43,9 @@ public class MedListActivity extends Activity {
 	    //Display stored
 		TextView textView = (TextView)findViewById(R.id.blah);
 		textView.setTextSize(40);
-		textView.setText(name);
+		textView.setText(name + " " + dose + " " + doseUnit);
+		
+		
 		
 //		for (int i = 0; i < 10; i++) {
 //			if (!names[i].equals("No name")&& doses[i]!=0) {

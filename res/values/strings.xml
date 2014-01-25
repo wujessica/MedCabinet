@@ -18,6 +18,14 @@
     
     <string name="button_save">Save</string>
 
+    <string-array name="dose_array">
+        <item>tablet(s)</item>
+        <item>tsp(s)</item>
+        <item>tbsp(s)</item>
+        <item>droplet(s)</item>
+        <item>gram(s)</item>
+    </string-array>
+    
     <string name="hello_world">Hello world!</string>
 
 </resources>

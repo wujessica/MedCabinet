@@ -11,12 +11,15 @@ import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 public class NewMedActivity extends Activity {
 	
 	private String medName;
 	private int dose;
+	private String doseUnit;
 	private int totalMeds = 0;
 	
 	public void onCreate(Bundle savedInstanceState) {
@@ -24,6 +27,15 @@ public class NewMedActivity extends Activity {
 		setContentView(R.layout.activity_new_med);
 		Intent intent = getIntent();
 		
+		
+		Spinner spinner = (Spinner) findViewById(R.id.dose_spinner);
+		// Create an ArrayAdapter using the string array and a default spinner layout
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+		        R.array.dose_array, android.R.layout.simple_spinner_item);
+		// Specify the layout to use when the list of choices appears
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		// Apply the adapter to the spinner
+		spinner.setAdapter(adapter);
 	}
 	
 	/**
@@ -80,12 +92,15 @@ public class NewMedActivity extends Activity {
 		
 		editor.putString(MedListActivity.MEDICINE_NAME, medName);
 		editor.putInt(MedListActivity.MEDICINE_DOSE, dose);
+		editor.putString(DoseSpinnerActivity.DOSE_UNIT, doseUnit);
 		editor.commit();
 		
+		super.finish();
 //		for (int i = 0; i < 10; i++) {
 //			editor.putString(MedListActivity.MEDICINE_NAME + i, medName);
 //			editor.putInt(MedListActivity.MEDICINE_DOSE + i, dose);
 //			editor.commit();
+		
 //		}
 		
 		
