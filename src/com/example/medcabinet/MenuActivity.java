@@ -1,35 +1,23 @@
 package com.example.medcabinet;
 
-import android.os.Bundle;
-import android.app.Activity;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.TextView;
-import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 
-public class DisplayMessageActivity extends Activity {
-
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+public class MenuActivity extends Activity {
+	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
-		// Show the Up button in the action bar.
-		setupActionBar();
-		
-		Intent intent = getIntent();
-		String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-		
-		TextView textView = new TextView(this);
-		textView.setTextSize(40);
-		textView.setText(message);
-		
-		setContentView(textView);
+		setContentView(R.layout.activity_menu); 
+		//Intent intent = getIntent();
 		
 	}
-
+	
 	/**
 	 * Set up the {@link android.app.ActionBar}, if the API is available.
 	 */
@@ -63,5 +51,16 @@ public class DisplayMessageActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	public void createNewMed (View view) {
+		Intent intent = new Intent(this, NewMedActivity.class);
+		startActivity (intent);
+	}
+	
+	public void displayList (View view) {
+		Intent intent = new Intent(this, MedListActivity.class);
+		startActivity (intent);
+	}
+
 
 }

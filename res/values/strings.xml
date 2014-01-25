@@ -3,10 +3,21 @@
 
     <string name="app_name">MedCabinet</string>
     <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>
+    <string name="button_hello">Hello! :)</string>
     <string name="action_settings">Settings</string>
+    
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_display_message">MyMessage</string>
+    <string name="title_activity_new_med">New Medication</string>
+    <string name="title_activity_med_list">Medicine List</string>
+    <string name="title_activity_menu">Menu</string>
+    
+    <string name="medication_name">name</string>
+    <string name="medication_dose">dose</string>
+    <string name="medication_frequency">frequency</string>
+    
+    <string name="button_save">Save</string>
+
     <string name="hello_world">Hello world!</string>
 
 </resources>

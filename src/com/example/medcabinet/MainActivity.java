@@ -1,6 +1,8 @@
 package com.example.medcabinet;
 
+import android.os.Build;
 import android.os.Bundle;
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -14,6 +16,15 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
+		// Make sure we're running on Honeycomb or higher to use ActionBar APIs
+	    //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+	        // For the main activity, make sure the app icon in the action bar
+	        // does not behave as a button
+	    //    ActionBar actionBar = getActionBar();
+	    //    actionBar.setHomeButtonEnabled(false);
+	    //}
 	}
 
 	@Override
@@ -24,10 +35,10 @@ public class MainActivity extends Activity {
 	}
 	
 	public void sendMessage (View view) {
-		Intent intent = new Intent(this, DisplayMessageActivity.class);
-		EditText editText = (EditText) findViewById(R.id.edit_message);
-		String message = editText.getText().toString();
-		intent.putExtra(EXTRA_MESSAGE, message);
+		Intent intent = new Intent(this, MenuActivity.class);
+		//EditText editText = (EditText) findViewById(R.id.medication_name);
+//		String message = editText.getText().toString();
+//		intent.putExtra(EXTRA_MESSAGE, message);
 		startActivity (intent);
 	}
 

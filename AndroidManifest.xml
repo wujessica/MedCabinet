@@ -30,6 +30,30 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.MedCabinet.MainActivity" />
         </activity>
+         <activity
+            android:name="com.example.medcabinet.MenuActivity"
+            android:label="@string/title_activity_menu"
+            android:parentActivityName="com.example.MedCabinet.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.MedCabinet.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.medcabinet.NewMedActivity"
+            android:label="@string/title_activity_new_med"
+            android:parentActivityName="com.example.MedCabinet.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.MedCabinet.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.example.medcabinet.MedListActivity"
+            android:label="@string/title_activity_med_list"
+            android:parentActivityName="com.example.MedCabinet.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.MedCabinet.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
